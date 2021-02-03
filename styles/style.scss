@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.nav {
+    position: fixed;
+    width: 100vw;
+    font-size: 16px;
+    z-index: 2;
+
+    &__bar {
+        display: flex;
+        height: 10vh;
+        justify-content: space-between;
+        background-color: #000;
+        align-items: center;
+    }
+
+    &__logo {
+        color: #fff;
+        padding-left: 15px;
+        letter-spacing: 5px;
+        font-size: 1.2em;
+    }
+
+    &__burger {
+        cursor: pointer;
+        padding-right: 15px;
+
+        &__line {
+            height: 3px;
+            width: 22px;
+            margin: 5px;
+            background-color: #fff;
+
+        }
+    }
+
+    &__menu {
+        clip-path: circle(15% at 95% -20%);
+        position: absolute;
+        left: 0;
+        top: 10vh;
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #000;
+        transition: 1.5s ease;
+
+        &--active {
+            clip-path: circle(165% at 95% -20%);
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.3em;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        opacity: 0;
+        transition: 1s ease 0.5s;
+
+
+        &--active {
+            opacity: 1;
+        }
+    }
+
+
+}
+
+.main-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/main-medium.jpg);
+    background-size: cover;
+    background-position: center;
+
+    &__opacity {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+
+    &__titles {
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        z-index: 1;
+    }
+
+
+}
