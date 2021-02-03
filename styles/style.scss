@@ -94,16 +94,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/images/main-small.jpg);
+    background-image: url(/images/main-medium.jpg);
     background-size: cover;
     background-position: center;
 
-    &__opacity {
+    &::before {
+        content: "";
         position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
         background-color: rgba(0, 0, 0, 0.3);
     }
 
