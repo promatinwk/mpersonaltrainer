@@ -114,7 +114,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/images/main-medium.jpg);
+  background-image: url("/mpersonaltrainer/images/main-medium.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -319,14 +319,14 @@
 }
 
 .progress__option__bodybuilding {
-  background-image: url("https://images.pexels.com/photos/4761779/pexels-photo-4761779.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-image: url("/mpersonaltrainer/images/bodybuilding.jpg");
 }
 
 .progress__option__powerlifting {
-  background-image: url("/images/deadlift.jpg");
+  background-image: url("/mpersonaltrainer/images/deadlift.jpg");
 }
 
 .progress__option__gds {
-  background-image: url("/images/openCategory.jpg");
+  background-image: url("/mpersonaltrainer/images/openCategory.jpg");
 }
 /*# sourceMappingURL=style.css.map */
