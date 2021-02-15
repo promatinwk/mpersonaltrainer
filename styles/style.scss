@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
 @import './mixins';
 @import './variables';
 
@@ -31,6 +32,8 @@
     }
 
     &__logo {
+        font-family: 'Dancing Script', sans-serif;
+        font-weight: 600;
         color: $primaryColor;
         padding-left: 15px;
         letter-spacing: 5px;
@@ -152,6 +155,7 @@
     &__side-title {
         font-weight: 100;
     }
+
 
 
 }
@@ -295,12 +299,12 @@
                 text-transform: uppercase;
                 font-size: 1.2em;
                 position: absolute;
-                left: 50%;
-                bottom: 5%;
-                transform: translateX(-50%);
+                width: 100%;
                 background-color: rgba(0, 0, 0, 0.8);
                 padding: 20px;
-                border-radius: 10px;
+                bottom: 0;
+                left: 0;
+                text-align: center;
 
             }
         }
@@ -432,4 +436,186 @@
 
 
 
+}
+
+.trainings {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    align-items: center;
+
+    &::after {
+        font-family: "Font Awesome 5 Free";
+        content: '\f073';
+        font-size: 12em;
+        color: rgba(163, 21, 26, 0.7);
+        position: absolute;
+        left: 70%;
+        bottom: 2%;
+    }
+
+    &__titles {
+
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            @include mainHeaders($primaryColor);
+            margin-bottom: 20px;
+
+            &::after {
+                @include afterHeaders($primaryColor)
+            }
+        }
+
+        h4 {
+            width: 80%;
+            text-align: center;
+            font-weight: 300;
+            color: $red;
+            margin-bottom: 20px;
+        }
+
+
+    }
+
+    &__calendar {
+        flex-grow: 1;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
+
+    &__event {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid $sideColor;
+        padding: 10px;
+        border-radius: 10px;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+
+        &::before {
+            font-family: "Font Awesome 5 Free";
+            content: '\f0a4';
+            font-size: 4em;
+            color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            left: -5%;
+            bottom: -16%;
+            transform: rotate(-25deg);
+        }
+
+        .event-title {
+            text-transform: uppercase;
+            font-weight: 500;
+            color: $darkRed;
+            font-size: 1.1em;
+        }
+
+        .event-date {
+            font-weight: 300;
+            color: $sideColor;
+        }
+
+        .event-read {
+            padding: 5px;
+            cursor: pointer;
+            border: 0;
+            text-transform: uppercase;
+            padding: 10px 30px;
+            color: #fff;
+            background-color: $red;
+            border-radius: 10px;
+        }
+    }
+}
+
+.contact {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+
+    &::before {
+        font-family: "Font Awesome 5 Free";
+        content: '\f086';
+        position: absolute;
+        font-size: 20em;
+        color: rgba(163, 21, 26, 0.7);
+        left: -20%;
+        bottom: 1%;
+    }
+
+    &__titles {
+        padding-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            @include mainHeaders($primaryColor);
+            margin-bottom: 20px;
+
+            &::after {
+                @include afterHeaders($primaryColor);
+            }
+        }
+
+        h4 {
+            font-weight: 300;
+            color: $red;
+            font-size: 1.2em;
+        }
+
+
+    }
+
+    .email-site {
+        position: absolute;
+        left: 100%;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        h1 {
+            padding-top: 10vh;
+            text-align: center;
+            @include mainHeaders($primaryColor);
+            margin-bottom: 20px;
+
+        }
+
+        .email-form {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            flex-basis: 70%;
+
+            label {
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 1.5em;
+                font-weight: 300;
+            }
+
+        }
+
+    }
 }

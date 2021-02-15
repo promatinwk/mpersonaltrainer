@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +35,8 @@
 }
 
 .nav__logo {
+  font-family: 'Dancing Script', sans-serif;
+  font-weight: 600;
   color: #8A1216;
   padding-left: 15px;
   letter-spacing: 5px;
@@ -400,13 +403,12 @@
   text-transform: uppercase;
   font-size: 1.2em;
   position: absolute;
-  left: 50%;
-  bottom: 5%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  border-radius: 10px;
+  bottom: 0;
+  left: 0;
+  text-align: center;
 }
 
 .progress__option__bodybuilding {
@@ -433,7 +435,7 @@
   text-transform: uppercase;
   cursor: pointer;
   color: #fff;
-  background-color: #A3151A;
+  background-color: #a3151a;
   border-radius: 5px;
   -webkit-transition: 0.4s linear;
   transition: 0.4s linear;
@@ -442,7 +444,7 @@
 }
 
 .progress .read-more:hover {
-  color: #A3151A;
+  color: #a3151a;
   background-color: #fff;
 }
 
@@ -547,14 +549,276 @@
 }
 
 .certificates__carousel__slide:first-of-type {
-  background-image: url("/images/certyfikat1.jpg");
+  background-image: url("/mpersonaltrainer/images/certyfikat1.jpg");
 }
 
 .certificates__carousel__slide:nth-of-type(2) {
-  background-image: url("/images/certyfikat2.jpg");
+  background-image: url("/mpersonaltrainer/images/certyfikat2.jpg");
 }
 
 .certificates__carousel__slide:nth-of-type(3) {
-  background-image: url("/images/certyfikat3.png");
+  background-image: url("/mpersonaltrainer/images/certyfikat3.png");
+}
+
+.trainings {
+  min-height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trainings::after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f073';
+  font-size: 12em;
+  color: rgba(163, 21, 26, 0.7);
+  position: absolute;
+  left: 70%;
+  bottom: 2%;
+}
+
+.trainings__titles {
+  padding-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.trainings__titles h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #8A1216;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.trainings__titles h1::after {
+  content: "";
+  display: block;
+  width: 160%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #8A1216;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: -30%;
+}
+
+.trainings__titles h4 {
+  width: 80%;
+  text-align: center;
+  font-weight: 300;
+  color: #B0171C;
+  margin-bottom: 20px;
+}
+
+.trainings__calendar {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.trainings__event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 2px solid #a3151a;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.trainings__event::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f0a4';
+  font-size: 4em;
+  color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: -5%;
+  bottom: -16%;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+}
+
+.trainings__event .event-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #630D10;
+  font-size: 1.1em;
+}
+
+.trainings__event .event-date {
+  font-weight: 300;
+  color: #a3151a;
+}
+
+.trainings__event .event-read {
+  padding: 5px;
+  cursor: pointer;
+  border: 0;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #B0171C;
+  border-radius: 10px;
+}
+
+.contact {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.contact::before {
+  font-family: "Font Awesome 5 Free";
+  content: '\f086';
+  position: absolute;
+  font-size: 20em;
+  color: rgba(163, 21, 26, 0.7);
+  left: -20%;
+  bottom: 1%;
+}
+
+.contact__titles {
+  padding-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact__titles h1 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #8A1216;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact__titles h1::after {
+  content: "";
+  display: block;
+  width: 160%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #8A1216;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: -30%;
+}
+
+.contact__titles h4 {
+  font-weight: 300;
+  color: #B0171C;
+  font-size: 1.2em;
+}
+
+.contact .email-site {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact .email-site h1 {
+  padding-top: 10vh;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #8A1216;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact .email-site .email-form {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.contact .email-site .email-form label {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */
