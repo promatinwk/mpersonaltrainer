@@ -8,8 +8,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif;
-
-
 }
 
 .container {
@@ -31,7 +29,7 @@
         align-items: center;
     }
 
-    &__logo {
+    &__logo a {
         font-family: 'Dancing Script', sans-serif;
         font-weight: 600;
         color: $primaryColor;
@@ -39,6 +37,7 @@
         letter-spacing: 5px;
         font-size: 1.8em;
         z-index: 5;
+        text-decoration: none;
     }
 
     &__burger {

@@ -10,6 +10,36 @@ const showMenu = ()=>{
     )
 
 }
+const scrollWebsite = () => {
+    navLinks.forEach(link => link.addEventListener('click', scrollToSection));
+}
+
+
+
+function scrollToSection(){
+    smoothScroll(event)
+    
+    if(mobileMenu.classList.contains('nav__menu--active')){ //zamykanie menu na małym ekranie
+        showMenu();
+}
+}
+
+const smoothScroll = (event) => {
+    event.preventDefault();
+    console.log(event.currentTarget);//ten console.log pokazuje co zostało kliknięte
+    const targetClass = event.currentTarget.getAttribute('href');
+    window.scrollTo({
+        top: targetClass==="#" ? 0 : document.querySelector(targetClass).offsetTop,
+        behavior:"smooth"
+    })
+}
+
+document.querySelector('.nav__logo a').addEventListener('click', scrollToSection);
+
+scrollWebsite();
+
+
+
 
 
 
