@@ -19,17 +19,10 @@ const smoothScroll = (event)=>{
         let targetId = event.currentTarget.getAttribute('href'); // w tą zmienną pobieram atrybut href elementu który kliknąłem.
     const scroll = (target, duration) => {
         let scrollTarget = document.querySelector(targetId);
-        let targetPosition = scrollTarget.getBoundingClientRect().top;
+        let targetPosition = scrollTarget.offsetTop;
         let startPosition = window.pageYOffset;
-        let distance;
-        if(startPosition > 1){
-            distance = targetPosition - startPosition;
-        }else if(targetPosition < 1){
-            distance = startPosition - targetPosition;
-        }
+        let distance = targetPosition - startPosition;
         let startTime = null;
-        console.log(startPosition);
-        console.log(targetPosition);
         
         
 
@@ -63,41 +56,6 @@ const smoothScroll = (event)=>{
 
 
 scrollWebsite()
-
-
-
-
-
-// //dziala ale bedzie zmiana na requestAnimationFrame
-// const scrollWebsite = () => {
-//     navLinks.forEach(link => link.addEventListener('click', scrollToSection));
-// }
-
-
-// //dziala ale bedzie zmiana na requestAnimationFrame
-// function scrollToSection(){
-//     smoothScroll(event)
-    
-//     if(mobileMenu.classList.contains('nav__menu--active')){ //zamykanie menu na małym ekranie
-//         showMenu();
-// }
-// }
-
-
-// //dziala ale bedzie zmiana na requestAnimationFrame
-// const smoothScroll = (event) => {
-//     event.preventDefault();
-//     console.log(event.currentTarget);//ten console.log pokazuje co zostało kliknięte
-//     const targetClass = event.currentTarget.getAttribute('href');
-//     window.scrollTo({
-//         top: targetClass==="#" ? 0 : document.querySelector(targetClass).offsetTop,
-//         behavior:"smooth"
-//     })
-// }
-
-// document.querySelector('.nav__logo a').addEventListener('click', scrollToSection);
-
-// scrollWebsite();
 
 
 
