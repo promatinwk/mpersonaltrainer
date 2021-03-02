@@ -556,6 +556,15 @@
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  cursor: -webkit-grab;
+  cursor: grab;
+  text-align: center;
 }
 
 .certificates__carousel__slide {
@@ -563,21 +572,10 @@
   height: 90%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  background-size: 70%;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-.certificates__carousel__slide:first-of-type {
-  background-image: url("/mpersonaltrainer/images/certyfikat1.jpg");
-}
-
-.certificates__carousel__slide:nth-of-type(2) {
-  background-image: url("/mpersonaltrainer/images/certyfikat2.jpg");
-}
-
-.certificates__carousel__slide:nth-of-type(3) {
-  background-image: url("/mpersonaltrainer/images/certyfikat3.png");
+.certificates__carousel__slide img {
+  width: 70%;
 }
 
 .trainings {
