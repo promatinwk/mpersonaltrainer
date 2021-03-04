@@ -548,6 +548,8 @@
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  position: relative;
+  overflow: hidden;
 }
 
 .certificates__carousel__track {
@@ -555,15 +557,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: -webkit-transform 0.3s ease-in;
-  transition: -webkit-transform 0.3s ease-in;
-  transition: transform 0.3s ease-in;
-  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
-  cursor: -webkit-grab;
-  cursor: grab;
   text-align: center;
 }
 
@@ -576,6 +569,45 @@
 
 .certificates__carousel__slide img {
   width: 70%;
+}
+
+.certificates__carousel__navigation {
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 85%;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.certificates__carousel__navigation button {
+  border: 0;
+  padding: 1em 2em;
+  background-color: #B0171C;
+  -webkit-box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.certificates__carousel__navigation button.prevBtn {
+  border-radius: 10px 0 0 10px;
+}
+
+.certificates__carousel__navigation button.nextBtn {
+  border-radius: 0 10px 10px 0;
+}
+
+.certificates__carousel__navigation button i {
+  font-size: 1.5em;
+  color: #f1e7d3;
 }
 
 .trainings {

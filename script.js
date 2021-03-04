@@ -1,14 +1,12 @@
 const navBurger = document.querySelector('.nav__burger');
 const mobileMenu = document.querySelector('.nav__menu');
 const navLinks = document.querySelectorAll('.nav__link');
-// const slider = document.querySelector('.certificates__carousel__track');
-// const slides = Array.from(document.querySelectorAll('.certificates__carousel__slide'));
-// let dragging = false;
-// let startPos = 0;
-// let currentTranslate = 0;
-// let previousTranslate = 0;
-// let animationID = 0;
-// let currentIndex = 0;
+const carouselTrack = document.querySelector('.certificates__carousel__track');
+const carouselSlides = document.querySelectorAll('.certificates__carousel__slide');
+const prevBtn = document.querySelector('.prevBtn');
+const nextBtn = document.querySelector('.nextBtn');
+
+
 
 const showMenu = ()=>{
     mobileMenu.classList.toggle('nav__menu--active');
@@ -60,81 +58,40 @@ const smoothScroll = (event)=>{
     scroll(targetId, 2000);
 }
 
-// slides.forEach((slide, index)=>{
-//     const slideImage = slide.querySelector('img');
-//     slideImage.addEventListener('dragstart', (e)=>e.preventDefault())
+//slider certificates
 
-//     //touchEvents
-//     slide.addEventListener('touchstart', touchStart(index))
-//     slide.addEventListener('touchend', touchEnd)
-//     slide.addEventListener('touchmove', touchMove)
-//     //mouseEvents
-//     slide.addEventListener('mousedown', touchStart(index))
-//     slide.addEventListener('mouseup', touchEnd)
-//     slide.addEventListener('mouseleave', touchEnd)
-//     slide.addEventListener('mousemove', touchMove)
-// })
+let counter = 1;
+const size = carouselSlides[0].clientWidth;
 
+carouselTrack.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-//disable context menu
-// window.oncontextmenu = function (event){
-//     event.preventDefault();
-//     event.stopPropagation(); 
-//     return false;
-// }
+//btns listeners
 
-// function touchStart(index){
-//     return function (event){
-//         console.log('start');
-//         startPos = getPositionX(event)
-//         currentIndex = index;
-//         dragging = true;
-//         animationID = requestAnimationFrame(animate)
-//     }
-// }
+nextBtn.addEventListener('click', ()=>{
+    if(counter >= carouselSlides.length - 1) return;
+    carouselTrack.style.transition = 'transform 0.4s ease-in-out';
+    counter++;
+    carouselTrack.style.transform = 'translateX(' + (-size * counter) + 'px)';
+})
 
-// function touchEnd(){
-//         dragging = false;
-//         const movedBy = currentTranslate - previousTranslate 
+prevBtn.addEventListener('click', ()=>{
+    if(counter <= 0 ) return;
+    carouselTrack.style.transition = 'transform 0.4s ease-in-out';
+    counter--;
+    carouselTrack.style.transform = 'translateX(' + (-size * counter) + 'px)';
+})
 
-//         if(movedBy < -100 && currentIndex < slides.length - 1){
-//         currentIndex += 1;
-//         }else if( movedBy > 100 && currentIndex > 0){
-//             currentIndex =-1;
-//         }
-
-//         setPositionByIndex()
-
-//         cancelAnimationFrame(animationID);
-// }
-
-// function touchMove(event){
-//         if (dragging){
-//             const currentPosition = getPositionX(event);
-//             currentTranslate = previousTranslate + currentTranslate - startPos;
-//         }
-// }
-
-// function getPositionX(event){
-//    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
-// }
-
-// function animate(){
-//     setSliderPosition()
-//     if (dragging)requestAnimationFrame(animate)
-// }
-
-
-// function setSliderPosition(){
-//     slider.style.transform = `translateX(${currentTranslate}px)`;
-// }
-
-// function setPositionByIndex(){
-//     currentTranslate = currentIndex * -window.innerWidth;
-//     previousTranslate = currentTranslate;
-//     setSliderPosition();
-// }
-
+carouselTrack.addEventListener('transitionend', ()=>{
+    if(carouselSlides[counter].id === 'lastClone'){
+        carouselTrack.style.transition = 'none';
+        counter = carouselSlides.length - 2;
+        carouselTrack.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }else if (carouselSlides[counter].id === 'firstClone'){
+        carouselTrack.style.transition = 'none';
+        counter = carouselSlides.length - counter;
+        carouselTrack.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+})
 
 
 

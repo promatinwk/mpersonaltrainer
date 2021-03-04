@@ -414,15 +414,13 @@
 
     &__carousel {
         flex-grow: 1;
+        position: relative;
+        overflow: hidden;
 
 
         &__track {
             height: 100%;
             display: flex;
-            overflow: hidden;
-            transform: translateX(0);
-            transition: transform 0.3s ease-in;
-            cursor: grab;
             text-align: center;
 
         }
@@ -434,6 +432,47 @@
 
             img {
                 width: 70%;
+            }
+        }
+
+        &__navigation {
+            width: 30%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 85%;
+            height: 10%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+
+            button {
+                border: 0;
+                padding: 1em 2em;
+                background-color: $red;
+                box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+
+
+
+
+                &.prevBtn {
+                    border-radius: 10px 0 0 10px;
+
+
+                }
+
+                &.nextBtn {
+                    border-radius: 0 10px 10px 0;
+                }
+
+                i {
+                    font-size: 1.5em;
+                    color: rgb(241, 231, 211);
+                }
+
+
             }
         }
     }
