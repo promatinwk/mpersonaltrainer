@@ -606,7 +606,7 @@
         font-size: 20em;
         color: rgba(163, 21, 26, 0.7);
         left: -20%;
-        bottom: 1%;
+        bottom: -2%;
     }
 
     &__titles {
@@ -668,7 +668,7 @@
     }
 
     &__email {
-        margin-top: 20px;
+        margin-top: 10px;
         text-align: center;
 
         h5 {
@@ -692,7 +692,7 @@
             color: #fff;
             background-color: $sideColor;
             box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-            z-index: 5;
+
         }
     }
 
@@ -830,10 +830,7 @@
         }
     }
 
-    //klasy aktywnosci kontaktu
-    .active-mail {
-        transform: translateX(0);
-    }
+
 }
 
 

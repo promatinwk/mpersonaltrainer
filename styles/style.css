@@ -785,7 +785,7 @@
   font-size: 20em;
   color: rgba(163, 21, 26, 0.7);
   left: -20%;
-  bottom: 1%;
+  bottom: -2%;
 }
 
 .contact__titles {
@@ -864,7 +864,7 @@
 }
 
 .contact__email {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -889,7 +889,6 @@
   background-color: #a3151a;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
           box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
-  z-index: 5;
 }
 
 .contact .email-site {
@@ -1052,10 +1051,5 @@
 
 .contact__social-media span:last-of-type {
   color: #2f2fa0;
-}
-
-.contact .active-mail {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
 }
 /*# sourceMappingURL=style.css.map */

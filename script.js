@@ -104,9 +104,11 @@ carouselTrack.addEventListener('transitionend', ()=>{
 
 contactBtn.addEventListener('click', ()=>{
     emailForm.classList.add('active');
+    console.log('klik!')
 })
 closeBtn.addEventListener('click', ()=>{
     emailForm.classList.remove('active');
+    console.log('klik2!')
 })
 
 
