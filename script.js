@@ -108,5 +108,7 @@ contactBtn.addEventListener('click', ()=>{
 closeBtn.addEventListener('click', ()=>{
     emailForm.classList.remove('active');
 })
+
+
 scrollWebsite()
 navBurger.addEventListener('click', showMenu)

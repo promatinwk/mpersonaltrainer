@@ -89,11 +89,13 @@
         opacity: 0;
         transition: 1s ease 0.5s;
         pointer-events: none;
+        z-index: -5;
 
 
         &--active {
             opacity: 1;
             pointer-events: visible;
+            z-index: 0;
         }
 
         &__about::before {

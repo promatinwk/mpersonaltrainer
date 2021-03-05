@@ -104,11 +104,13 @@
   -webkit-transition: 1s ease 0.5s;
   transition: 1s ease 0.5s;
   pointer-events: none;
+  z-index: -5;
 }
 
 .nav__link--active {
   opacity: 1;
   pointer-events: visible;
+  z-index: 0;
 }
 
 .nav__link__about::before {
