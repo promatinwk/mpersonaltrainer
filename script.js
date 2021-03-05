@@ -5,6 +5,10 @@ const carouselTrack = document.querySelector('.certificates__carousel__track');
 const carouselSlides = document.querySelectorAll('.certificates__carousel__slide');
 const prevBtn = document.querySelector('.prevBtn');
 const nextBtn = document.querySelector('.nextBtn');
+const contactBtn = document.querySelector('.ask-us');
+const emailForm = document.querySelector('.email-site');
+const closeBtn = document.querySelector('.close-email');
+
 
 
 
@@ -98,6 +102,11 @@ carouselTrack.addEventListener('transitionend', ()=>{
 
 
 
-
+contactBtn.addEventListener('click', ()=>{
+    emailForm.classList.add('active');
+})
+closeBtn.addEventListener('click', ()=>{
+    emailForm.classList.remove('active');
+})
 scrollWebsite()
 navBurger.addEventListener('click', showMenu)
