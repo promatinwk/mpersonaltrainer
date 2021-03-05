@@ -89,6 +89,7 @@
         opacity: 0;
         transition: 1s ease 0.5s;
         pointer-events: none;
+        touch-action: none;
         z-index: -5;
 
 
@@ -96,6 +97,7 @@
             opacity: 1;
             pointer-events: visible;
             z-index: 0;
+            touch-action: auto;
         }
 
         &__about::before {

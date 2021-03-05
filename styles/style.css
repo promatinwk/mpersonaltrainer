@@ -104,6 +104,8 @@
   -webkit-transition: 1s ease 0.5s;
   transition: 1s ease 0.5s;
   pointer-events: none;
+  -ms-touch-action: none;
+      touch-action: none;
   z-index: -5;
 }
 
@@ -111,6 +113,8 @@
   opacity: 1;
   pointer-events: visible;
   z-index: 0;
+  -ms-touch-action: auto;
+      touch-action: auto;
 }
 
 .nav__link__about::before {
