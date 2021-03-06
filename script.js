@@ -8,6 +8,9 @@ const nextBtn = document.querySelector('.nextBtn');
 const contactBtn = document.querySelector('.ask-us');
 const emailForm = document.querySelector('.email-site');
 const closeBtn = document.querySelector('.close-email');
+const readMore = document.querySelectorAll('.read-more');
+const progressPathsDescription = document.querySelectorAll('.description');
+const closeDescription = document.querySelectorAll('.close-description');
 
 
 
@@ -62,14 +65,12 @@ const smoothScroll = (event)=>{
     scroll(targetId, 2000);
 }
 
-//slider certificates
 
 let counter = 1;
 const size = carouselSlides[0].clientWidth;
 
 carouselTrack.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-//btns listeners
 
 nextBtn.addEventListener('click', ()=>{
     if(counter >= carouselSlides.length - 1) return;
@@ -97,11 +98,6 @@ carouselTrack.addEventListener('transitionend', ()=>{
     }
 })
 
-
-
-
-
-
 contactBtn.addEventListener('click', ()=>{
     emailForm.classList.add('active');
     console.log('klik!')
@@ -112,5 +108,21 @@ closeBtn.addEventListener('click', ()=>{
 })
 
 
+
+
+readMore.forEach((readBtn, idx) => {
+    readBtn.addEventListener('click', ()=>{
+        progressPathsDescription[idx].style.transform = 'translateX(0)';
+    });
+})
+
+closeDescription.forEach((close, idx) => {
+    close.addEventListener('click', ()=>{
+        console.log('dziala')
+        progressPathsDescription[idx].style.transform = 'translateX(100%)';
+    })
+})
+
+
 scrollWebsite()
-navBurger.addEventListener('click', showMenu)
+navBurger.addEventListener('click', showMenu);

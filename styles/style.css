@@ -424,6 +424,7 @@
   background-size: cover;
   border-radius: 10px;
   padding: 10px;
+  overflow-x: hidden;
 }
 
 .progress__option__bodybuilding span, .progress__option__powerlifting span, .progress__option__gds span {
@@ -449,6 +450,56 @@
 
 .progress__option__gds {
   background-image: url("/mpersonaltrainer/images/openCategory.jpg");
+}
+
+.progress__option .description {
+  position: absolute;
+  background-color: whitesmoke;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #B0171C;
+  overflow: hidden;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+.progress__option .description::after {
+  font-family: "Font Awesome 5 Free";
+  content: '\f567';
+  color: rgba(163, 21, 26, 0.4);
+  font-size: 10em;
+  position: absolute;
+  left: -10%;
+  top: -5%;
+}
+
+.progress__option .description .close-description {
+  font-size: 3em;
+  cursor: pointer;
+}
+
+.progress__option .description .info {
+  text-transform: uppercase;
+  font-size: 1.5em;
 }
 
 .progress .read-more {
@@ -776,6 +827,7 @@
           align-items: center;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .contact::before {
