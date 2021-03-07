@@ -361,6 +361,7 @@
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
 
+
             &::after {
                 font-family: "Font Awesome 5 Free";
                 content: '\f567';
@@ -369,6 +370,8 @@
                 position: absolute;
                 left: -10%;
                 top: -5%;
+                pointer-events: none;
+                touch-action: none;
 
             }
 
@@ -884,3 +887,115 @@
 
 
 //media
+
+@media screen and (orientation:landscape) and (max-width: 800px) {
+    .nav {
+        &__menu {
+            clip-path: circle(15% at 95% -25%);
+
+            &--active {
+                clip-path: circle(160% at 95% -25%);
+            }
+        }
+
+        &__list {
+            padding: 10px;
+        }
+    }
+
+}
+
+.about {
+    &__description {
+        p {
+            margin-top: 5px;
+        }
+
+        img {
+            display: none;
+        }
+    }
+}
+
+.progress {
+    min-height: 150vh;
+
+    &__paths {
+        flex-direction: column;
+    }
+
+    &__options {
+        flex-direction: row;
+        height: 80vh;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    &__option {
+        height: 100%;
+    }
+}
+
+.certificates {
+    min-height: 170vh;
+    overflow-y: hidden;
+
+    &__carousel {
+        margin-top: 20px;
+        height: 80%;
+
+        &__slide {
+
+
+            img {
+                width: 40%;
+            }
+        }
+
+        &__navigation {
+            justify-content: space-between;
+            width: 100%;
+            top: 30%;
+
+            .prevBtn {
+                margin-left: 20px;
+            }
+
+            .nextBtn {
+                margin-right: 20px;
+            }
+        }
+
+    }
+}
+
+.trainings {
+    min-height: 250vh;
+
+    &::after {
+        left: 80%;
+        bottom: 0;
+    }
+}
+
+.contact {
+    &__social-media {
+        height: 50%;
+    }
+
+    .email-site {
+        flex-direction: row;
+
+        .email-form {
+            height: 90%;
+
+        }
+
+        .close-email {
+            left: 15%;
+        }
+    }
+
+
+}
