@@ -1120,99 +1120,81 @@
   .nav__list {
     padding: 10px;
   }
-}
-
-.about__description p {
-  margin-top: 5px;
-}
-
-.about__description img {
-  display: none;
-}
-
-.progress {
-  min-height: 150vh;
-}
-
-.progress__paths {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.progress__options {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  height: 80vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.progress__option {
-  height: 100%;
-}
-
-.certificates {
-  min-height: 170vh;
-  overflow-y: hidden;
-}
-
-.certificates__carousel {
-  margin-top: 20px;
-  height: 80%;
-}
-
-.certificates__carousel__slide img {
-  width: 40%;
-}
-
-.certificates__carousel__navigation {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  top: 30%;
-}
-
-.certificates__carousel__navigation .prevBtn {
-  margin-left: 20px;
-}
-
-.certificates__carousel__navigation .nextBtn {
-  margin-right: 20px;
-}
-
-.trainings {
-  min-height: 250vh;
-}
-
-.trainings::after {
-  left: 80%;
-  bottom: 0;
-}
-
-.contact__social-media {
-  height: 50%;
-}
-
-.contact .email-site {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.contact .email-site .email-form {
-  height: 90%;
-}
-
-.contact .email-site .close-email {
-  left: 15%;
+  .about__description p {
+    margin-top: 5px;
+  }
+  .about__description img {
+    display: none;
+  }
+  .progress {
+    min-height: 150vh;
+  }
+  .progress__paths {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .progress__options {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 80vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .progress__option {
+    height: 100%;
+  }
+  .certificates {
+    min-height: 170vh;
+    overflow-y: hidden;
+  }
+  .certificates__carousel {
+    margin-top: 20px;
+    height: 80%;
+  }
+  .certificates__carousel__slide img {
+    width: 40%;
+  }
+  .certificates__carousel__navigation {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+    top: 30%;
+  }
+  .certificates__carousel__navigation .prevBtn {
+    margin-left: 20px;
+  }
+  .certificates__carousel__navigation .nextBtn {
+    margin-right: 20px;
+  }
+  .trainings {
+    min-height: 250vh;
+  }
+  .trainings::after {
+    left: 80%;
+    bottom: 0;
+  }
+  .contact__social-media {
+    height: 50%;
+  }
+  .contact .email-site {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact .email-site .email-form {
+    height: 90%;
+  }
+  .contact .email-site .close-email {
+    left: 15%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

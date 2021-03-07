@@ -903,99 +903,101 @@
         }
     }
 
-}
 
-.about {
-    &__description {
-        p {
-            margin-top: 5px;
-        }
 
-        img {
-            display: none;
-        }
-    }
-}
-
-.progress {
-    min-height: 150vh;
-
-    &__paths {
-        flex-direction: column;
-    }
-
-    &__options {
-        flex-direction: row;
-        height: 80vh;
-        justify-content: space-around;
-        align-items: center;
-
-    }
-
-    &__option {
-        height: 100%;
-    }
-}
-
-.certificates {
-    min-height: 170vh;
-    overflow-y: hidden;
-
-    &__carousel {
-        margin-top: 20px;
-        height: 80%;
-
-        &__slide {
-
+    .about {
+        &__description {
+            p {
+                margin-top: 5px;
+            }
 
             img {
-                width: 40%;
+                display: none;
+            }
+        }
+    }
+
+    .progress {
+        min-height: 150vh;
+
+        &__paths {
+            flex-direction: column;
+        }
+
+        &__options {
+            flex-direction: row;
+            height: 80vh;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        &__option {
+            height: 100%;
+        }
+    }
+
+    .certificates {
+        min-height: 170vh;
+        overflow-y: hidden;
+
+        &__carousel {
+            margin-top: 20px;
+            height: 80%;
+
+            &__slide {
+
+
+                img {
+                    width: 40%;
+                }
+            }
+
+            &__navigation {
+                justify-content: space-between;
+                width: 100%;
+                top: 30%;
+
+                .prevBtn {
+                    margin-left: 20px;
+                }
+
+                .nextBtn {
+                    margin-right: 20px;
+                }
+            }
+
+        }
+    }
+
+    .trainings {
+        min-height: 250vh;
+
+        &::after {
+            left: 80%;
+            bottom: 0;
+        }
+    }
+
+    .contact {
+        &__social-media {
+            height: 50%;
+        }
+
+        .email-site {
+            flex-direction: row;
+
+            .email-form {
+                height: 90%;
+
+            }
+
+            .close-email {
+                left: 15%;
             }
         }
 
-        &__navigation {
-            justify-content: space-between;
-            width: 100%;
-            top: 30%;
-
-            .prevBtn {
-                margin-left: 20px;
-            }
-
-            .nextBtn {
-                margin-right: 20px;
-            }
-        }
 
     }
-}
-
-.trainings {
-    min-height: 250vh;
-
-    &::after {
-        left: 80%;
-        bottom: 0;
-    }
-}
-
-.contact {
-    &__social-media {
-        height: 50%;
-    }
-
-    .email-site {
-        flex-direction: row;
-
-        .email-form {
-            height: 90%;
-
-        }
-
-        .close-email {
-            left: 15%;
-        }
-    }
-
 
 }
